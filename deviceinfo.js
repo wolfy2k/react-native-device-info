@@ -32,6 +32,9 @@ module.exports = {
   getBundleId: function() {
     return RNDeviceInfo.bundleId;
   },
+  getApplicationName: function() {
+    return RNDeviceInfo.applicationName;
+  },
   getBuildNumber: function() {
     return RNDeviceInfo.buildNumber;
   },
