@@ -85,7 +85,8 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
 
     PackageManager packageManager = this.reactContext.getPackageManager();
     String packageName = this.reactContext.getPackageName();
-
+    String applicationNamae = this.reactContext.getApplicationInfo().loadLabel(context.getPackageManager());
+    
     constants.put("appVersion", "not available");
     constants.put("buildVersion", "not available");
     constants.put("buildNumber", 0);
@@ -121,6 +122,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
     constants.put("uniqueId", Secure.getString(this.reactContext.getContentResolver(), Secure.ANDROID_ID));
     constants.put("systemManufacturer", Build.MANUFACTURER);
     constants.put("bundleId", packageName);
+    constants.put("applicationName", applicationName);
     constants.put("userAgent", System.getProperty("http.agent"));
     constants.put("timezone", TimeZone.getDefault().getID());
     constants.put("isEmulator", this.isEmulator());
