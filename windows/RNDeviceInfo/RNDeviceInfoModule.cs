@@ -53,7 +53,7 @@ namespace RNDeviceInfo
                 PackageId packageId = package.Id;
                 PackageVersion version = packageId.Version;
                 String bundleId = packageId.Name;
-                String applicationName = package.DisplayName;
+                String appName = package.DisplayName;
 
                 try
                 {
@@ -108,7 +108,7 @@ namespace RNDeviceInfo
                 constants["uniqueId"] = device_id;
                 constants["systemManufacturer"] = manufacturer;
                 constants["bundleId"] = bundleId;
-                constants["applicationName"] = applicationName;
+                constants["appName"] = appName;
                 constants["userAgent"] = "not available";
                 constants["timezone"] = TimeZoneInfo.Local.Id;
                 constants["isEmulator"] = IsEmulator(model);
