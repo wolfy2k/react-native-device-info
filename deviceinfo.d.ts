@@ -9,7 +9,6 @@ export function getDeviceId(): string;
 export function getSystemName(): string;
 export function getSystemVersion(): string;
 export function getBundleId(): string;
-export function getApplicationName(): string;
 export function getBuildNumber(): string;
 export function getVersion(): string;
 export function getReadableVersion(): string;

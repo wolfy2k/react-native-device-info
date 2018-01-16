@@ -56,8 +56,7 @@ namespace RNDeviceInfo
                 Package package = Package.Current;
                 PackageId packageId = package.Id;
                 PackageVersion version = packageId.Version;
-                String bundleId = packageId.Name;
-                String appName = package.DisplayName;
+                String packageName = package.DisplayName;
 
                 try
                 {
@@ -99,7 +98,7 @@ namespace RNDeviceInfo
                 catch
                 {
                 }
-                
+
                 constants["instanceId"] = "not available";
                 constants["deviceName"] = deviceName;
                 constants["systemName"] = "Windows";
@@ -112,8 +111,7 @@ namespace RNDeviceInfo
                 constants["deviceCountry"] = culture.EnglishName;
                 constants["uniqueId"] = device_id;
                 constants["systemManufacturer"] = manufacturer;
-                constants["bundleId"] = bundleId;
-                constants["appName"] = appName;
+                constants["bundleId"] = packageName;
                 constants["userAgent"] = "not available";
                 constants["timezone"] = TimeZoneInfo.Local.Id;
                 constants["isEmulator"] = IsEmulator(model);
